@@ -1,0 +1,166 @@
+*
+    padding: 0px
+    margin: 0px
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+
+img
+    max-width: 100%
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0px 10px
+
+.users
+    margin-top: 30px
+
+.users__search
+    display: flex
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    border-radius: 30px
+    padding: 5px 20px
+    align-items: center
+    justify-content: center
+
+.users__search-input
+    width: 100%
+    border: 0px
+    padding: 0px
+    outline: none
+    font-size: 20px
+
+.users__search-button
+    max-width: 25px
+    cursor: pointer
+
+.users__list
+    display: flex
+    gap: 30px
+    justify-content: center
+
+.users__item
+    display: flex
+    flex-direction: column
+    flex: 0 1 30%
+    padding: 15px
+    box-shadow: 4px 2px 46px 0px rgba(34, 60, 80, 0.2)
+    border-radius: 20px
+    min-height: 300px
+    cursor: pointer
+
+.users__item--hide
+    display: none
+
+.users__list
+    flex-wrap: wrap
+    margin-top: 60px
+    
+.users__item-title
+    margin-bottom: 30px
+
+.users__item-icon
+    max-width: 30px
+
+.users__item-info
+    display: flex
+    align-items: center
+    gap: 20px
+
+.users__item-info + .users__item-info
+    margin-top: 10px
+
+.users__item-link
+    color: #000
+    text-decoration: none
+
+.users__item-link--underline
+    text-decoration: underline
+
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(205, 214, 227, 0.6)
+    display: flex
+    // align-items: center
+    align-items: flex-start
+    justify-content: center
+    display: none
+
+.modal--open
+    display: flex
+
+
+.modal__inner
+    margin-top: 5%
+    background-color: #fff
+    width: 40%
+    min-height: 300px
+    border-radius: 20px
+    position: relative
+    padding: 35px 20px
+
+.modal__bitton
+    cursor: pointer
+    display: block
+    position: absolute
+    background-color: #A279AA
+    font-size: 25px
+    color: #fff
+    width: 40px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    left: 50%
+    top: 0px
+    transform: translate(-50%, -50%)
+
+.modal__info
+    margin-top: 20px
+
+.modal__info-item
+    display: flex
+
+.modal__info-item + .modal__info-item
+    margin-top: 15px
+
+
+.modal__info-name
+    font-weight: 600
+    flex: 1 1 50%
+
+.modal__info-text
+    color: #000
+    flex: 1 1 50%
+.modal__footer
+    margin-top: 40px
+.modal__info-link
+    text-decoration: none
+    color: #000
+
+.modal__footer-text
+    margin-top: 10px
+    color: rgba(0, 0, 0, 0.6)
+    font-weight: 500
+.text-underline
+    text-decoration: underline
+
+@media (max-width: 1046px)
+    .modal__inner
+        width: 50%
+    .users__item
+        flex: 1 1 100%
+    .users__list
+        justify-content: center
+    .container
+        max-width: 900px
+
+@media (max-width: 600px)
+    .users__item
+        flex: 1 1 100%
