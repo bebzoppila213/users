@@ -1,6 +1,6 @@
 import { getUser } from "./api"
 import { IUser } from "./interfaces"
-
+import { store } from "./redux/users"
 const modal = document.querySelector('.modal')
 const modalClose = document.querySelector('.modal__bitton')
 const modalInner = document.querySelector('.modal__inner')
@@ -17,10 +17,9 @@ document.addEventListener('click', event => {
     const userItem = getUserItem(event)
  if(userItem){
         const user = event.target as HTMLDivElement
-        console.log(user.dataset.id);
-        
-        getUser(Number(user.dataset.id)).then(data => updateModalData(data)).then(() => modal.classList.add('modal--open'))
-        
+        const userData = store.getState().filterUsers.find((filterUser) => filterUser.id === Number(user.dataset.id))
+        updateModalData(userData)
+        modal.classList.add('modal--open')
     }
 })
 
