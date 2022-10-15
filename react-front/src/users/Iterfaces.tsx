@@ -1,4 +1,3 @@
-
 export interface IUser{
     name: string,
     phone: string,
@@ -8,4 +7,4 @@ export interface IUser{
     department: string,
     hire_date: string,
     id: number
-}
+  }
